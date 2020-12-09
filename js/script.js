@@ -1,41 +1,21 @@
+let elements = document.querySelectorAll(".element");
 
-let timer = document.querySelector("#timer");
-let btn = document.querySelector("#btn");
+let i = 0;
 
-
-setInterval(() => {
-    var now = new Date();
-
-    timer.innerHTML = now.getMinutes() + ":" + now.getSeconds();
-
-    if(now.getSeconds() == 1){
-        timer.style.color = "blue";
-    }
-    if(now.getSeconds() == 2){
-        timer.style.color = "#baac0d";
-    }
-    if(now.getSeconds() > 2){
-        timer.style.color = "black";
+setInterval( () => {
+    if(i == 0){
+        elements[0].style.opacity = 0;
+        elements[1].style.opacity = 0;
+        elements[2].style.opacity = 0;
     }
 
-}, 1000);
-
-let display = 1;
-
-function click(){
-    if(display == 1){
-        timer.style.display = 'none';
-        display = 0;
-    }
-    else if(display == 0){
-        timer.style.display = 'block';
-        display = 1;
+    elements[i].style.opacity = 1;
+    i = i + 1;
+    
+    if(i > 2){
+        i=0;
     }
     
-}
-
-btn.onclick = click;
-
-
+}, 3000 );
 
 
