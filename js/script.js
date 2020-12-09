@@ -4,9 +4,9 @@ let i = 0;
 
 setInterval( () => {
     if(i == 0){
-        elements[0].style.opacity = 0;
-        elements[1].style.opacity = 0;
-        elements[2].style.opacity = 0;
+        for( let el of elements ){
+            el.style.opacity = 0;
+        }
     }
 
     elements[i].style.opacity = 1;
