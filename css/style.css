@@ -1,19 +1,14 @@
-img{
-    width: 100%;
-}
-.item{
-    max-width: 500px;
-}
-.grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.header button{
+    display: none;
 }
 
-@media (max-width: 600px){
-    .grid{
-        display: grid;
-        grid-template-columns: 1fr;
+@media (max-width: 700px){
+    .header button{
+        display: inline;
+    }
+    .header nav{
+        display: none;
+        flex-direction: column;
     }
 }
-
 
