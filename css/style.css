@@ -1,35 +1,9 @@
-body, html{
-    margin: 0;
-    padding: 0;
+img{
+    width: 500px;
 }
 
-.slider{
-    height: 750px;
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-
-.element{
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-
-    transition: 0.5s;
-}
-
-.element img{
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: top;
-}
-
-.element p{
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-    font-size: 40px;
-}
-
-
-
